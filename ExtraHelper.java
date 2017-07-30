@@ -1,4 +1,4 @@
-package com.appplusmobile.appplusmobiledemo.helper;
+package com.nilsign.androidhelpers;
 
 import android.app.Activity;
 import android.os.Bundle;
