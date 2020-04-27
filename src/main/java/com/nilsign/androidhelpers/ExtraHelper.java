@@ -10,10 +10,9 @@ public final class ExtraHelper {
   }
 
   public static <T extends Serializable> T getExtra(String key, Bundle bundle, Activity activity) {
-    if (bundle == null) {
-      return (T) activity.getIntent().getSerializableExtra(key);
-    }
-    return (T) bundle.getSerializable(key);
+    return bundle == null
+        ? (T) activity.getIntent().getSerializableExtra(key);
+        : (T) bundle.getSerializable(key);
   }
 
   public static <T extends Serializable> void putExtra(String key, T value, Bundle bundle) {
